@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <div>
+    <h2>Testing with Selenium Webdriver in JavaScript</h2>
+  </div>
+  <div>
+    <form id="testForm">
+      <input type="text" id="field1"/>
+      <input type="submit" id="button1" value="Add Text"/>
+    </form>
+  </div>
+  <div>
+    <span id="textSpan"/>
+  </div>
+  <div style="margin-top: 2em">
+    <a href="page2.html">Page 2</a>
+  </div>
+
+  <script type="text/javascript">
+    var addText = function(evt) {
+      if (evt.preventDefault) {
+        evt.preventDefault();
+      } else {
+        evt.returnValue = false;
+      }
+
+      var textBox = document.getElementById('field1');
+      var text = textBox.value;
+
+      var span = document.getElementById('textSpan');
+      if (span) {
+        var txtNode = document.createTextNode(text);
+        var br = document.createElement('br');
+        span.appendChild(txtNode);
+        span.appendChild(br);
+      } else {
+        console.log("Couldn't find textSpan");
+      }
+    }
+    var form = document.getElementById('testForm');
+    if (form.attachEvent) {
+      form.attachEvent("onsubmit", addText); // IE
+    } else {
+      form.addEventListener("submit", addText);
+    }
+  </script>
+</body>
+</html>
