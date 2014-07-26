@@ -19,6 +19,9 @@ Install a simple web server:
 
 Run http-server in this directory.
 
+    $ http-server
+    Starting up http-server, serving ./ on port: 8080
+    Hit CTRL-C to stop the server
 
 To run the tests:
 
