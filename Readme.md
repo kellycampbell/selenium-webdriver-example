@@ -13,6 +13,7 @@ Download/Install chromedriver binary. It must be in your path.
     http://chromedriver.storage.googleapis.com/index.html
 
 Install a simple web server:
+
     npm install -g http-server
 
 
