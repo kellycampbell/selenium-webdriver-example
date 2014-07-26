@@ -10,7 +10,7 @@ At root of this project:
 
 Download/Install chromedriver binary. It must be in your path.
 
-    http://chromedriver.storage.googleapis.com/index.html
+http://chromedriver.storage.googleapis.com/index.html
 
 Install a simple web server:
 
@@ -30,5 +30,6 @@ To run the tests:
 A chrome window should open up and the tests should run.
 
 Optional Selenium standalone server (for Firefox, IE)
+
 http://docs.seleniumhq.org/
 
